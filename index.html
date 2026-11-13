@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Washim Reja — Independent AI Engineer</title>
+<meta name="description" content="Washim Reja is an independent AI engineer, software developer and technology creator based in India, building voice, memory and creative AI products.">
+<meta property="og:title" content="Washim Reja — Independent AI Engineer">
+<meta property="og:description" content="AI products that listen, remember and ask before they act.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--surf:#fff;--ink:#14130f;--mute:#6b675e;--line:#e4e0d6;--acc:#3b3bf0;--accsoft:#ececff;--hdr:rgba(247,245,240,.85);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0c;--surf:#161613;--ink:#f2f0ea;--mute:#8f8b80;--line:#26251f;--acc:#9a9aff;--accsoft:#1d1d33;--hdr:rgba(14,14,12,.85);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0e0c;--surf:#161613;--ink:#f2f0ea;--mute:#8f8b80;--line:#26251f;--acc:#9a9aff;--accsoft:#1d1d33;--hdr:rgba(14,14,12,.85);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:60}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.02em;margin:0;line-height:1.05}
+h1{font-size:clamp(2.8rem,8vw,5.6rem)}
+h2{font-size:clamp(2rem,4.6vw,3.2rem)}
+h3{font-size:1.6rem}
+em{color:var(--acc);font-style:italic}
+.eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:14px}
+.lead{color:var(--mute);font-size:1.1rem;max-width:56ch}
+section{padding:96px 0;border-top:1px solid var(--line)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:"Instrument Serif",Georgia,serif;font-size:1.5rem}
+.logo i{color:var(--acc)}
+.links{display:flex;gap:28px;align-items:center;font-size:.92rem;color:var(--mute)}
+.links a{transition:color .2s}.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:999px;font-weight:500;font-size:.95rem;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink)}
+.icon{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surf);display:grid;place-items:center}
+.menu{display:none}
+.hero{padding:120px 0 96px;border:0}
+.hero h1{max-width:12ch}
+.hero .lead{margin:28px 0 36px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.meta{margin-top:56px;display:flex;gap:32px;flex-wrap:wrap;color:var(--mute);font-size:.85rem}
+.meta b{display:block;color:var(--ink);font-weight:500;font-size:1rem}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:28px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--mute);box-shadow:0 18px 40px -24px rgba(0,0,0,.35)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);margin-top:48px}
+.card p{color:var(--mute);margin:10px 0 0;font-size:.95rem}
+.num{font-size:.8rem;color:var(--acc);font-weight:600;margin-bottom:18px;display:block}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:40px 0 16px}
+.tab{border:1px solid var(--line);background:transparent;padding:10px 18px;border-radius:999px;font-size:.9rem;color:var(--mute);transition:.2s}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.panel{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;min-height:240px}
+.panel ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.panel li{padding:12px 16px;border:1px solid var(--line);border-radius:12px;font-size:.92rem;background:var(--bg)}
+.car{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:40px;padding-bottom:8px;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.car .card{flex:0 0 min(420px,86%);scroll-snap-align:start}
+.car q{font-family:"Instrument Serif",Georgia,serif;font-size:1.5rem;line-height:1.25;quotes:"“" "”";display:block;margin-bottom:14px}
+.ctl{display:flex;gap:8px;margin-top:20px}
+.split{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.steps{display:grid;gap:12px;counter-reset:s}
+.steps div{counter-increment:s;display:flex;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:var(--surf)}
+.steps div::before{content:"0" counter(s);color:var(--acc);font-weight:600;font-size:.85rem;padding-top:2px}
+.steps b{display:block;font-weight:500}.steps span{color:var(--mute);font-size:.92rem}
+.flow{display:flex;align-items:stretch;gap:0;margin-top:48px}
+.node{flex:1;background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:20px;position:relative}
+.node small{color:var(--mute);display:block;font-size:.8rem;margin-top:4px}
+.node b{font-weight:500}
+.arrow{width:32px;display:grid;place-items:center;color:var(--acc);flex:none}
+.pulse{animation:p 2.4s ease-in-out infinite}
+@keyframes p{0%,100%{opacity:.35}50%{opacity:1}}
+.mem{display:grid;gap:10px}
+.fact{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surf);transition:opacity .3s,transform .3s}
+.fact.gone{opacity:0;transform:translateX(16px)}
+.fact small{color:var(--mute);display:block}
+.chip{font-size:.72rem;background:var(--accsoft);color:var(--acc);border-radius:99px;padding:3px 10px;margin-right:6px;font-weight:500}
+.x{border:1px solid var(--line);background:transparent;border-radius:99px;padding:6px 14px;font-size:.8rem;color:var(--mute);flex:none}
+.x:hover{color:var(--ink);border-color:var(--ink)}
+.acc{border-top:1px solid var(--line);margin-top:40px}
+.q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:22px 0;font-size:1.1rem;font-weight:500}
+.q span{transition:transform .25s;color:var(--acc);font-size:1.4rem;line-height:1}
+.q[aria-expanded="true"] span{transform:rotate(45deg)}
+.a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.a.open{grid-template-rows:1fr}
+.a>div{overflow:hidden}
+.a p{margin:0;padding:18px 0 24px;color:var(--mute);max-width:70ch;border-bottom:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:72px 0 40px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+.fgrid h4{margin:0 0 14px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:500}
+.fgrid a{display:block;color:var(--mute);padding:4px 0;font-size:.95rem}.fgrid a:hover{color:var(--ink)}
+.copy{margin-top:56px;color:var(--mute);font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.pulse{animation:none}}
+@media (max-width:860px){
+.links{position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px 24px 20px;display:none}
+.links.open{display:flex}.links a{padding:12px 0;width:100%;font-size:1.05rem}
+.menu{display:grid}
+.grid,.split,.panel,.fgrid{grid-template-columns:1fr}
+.split{gap:32px}
+.flow{flex-direction:column}.arrow{width:auto;height:28px;transform:rotate(90deg)}
+section{padding:72px 0}.hero{padding:72px 0 64px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a class="logo" href="#top" aria-label="Washim Reja, home">Washim<i> Reja</i></a>
+<nav class="links" id="links" aria-label="Primary">
+<a href="#capabilities">Capabilities</a><a href="#work">Work</a><a href="#approach">Approach</a><a href="#notes">Notes</a><a href="#faq">FAQ</a>
+</nav>
+<div style="display:flex;gap:10px;align-items:center">
+<button class="icon" id="theme" aria-label="Toggle colour theme">◐</button>
+<a class="btn" href="#contact" style="padding:9px 18px">Start a project</a>
+<button class="icon menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
+</div>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="wrap">
+<p class="eyebrow rv">Independent AI engineer · India</p>
+<h1 class="rv">AI that listens, remembers, and <em>asks first.</em></h1>
+<p class="lead rv">I’m Washim Reja, a software developer and technology creator. I design and build AI products with a clear memory, a clear voice, and a clear sense of when to stop.</p>
+<div class="cta rv"><a class="btn" href="#contact">Start a project →</a><a class="btn ghost" href="#work">See the work</a></div>
+<div class="meta rv"><div><b>Voice + memory</b>assistants that persist</div><div><b>Frontend</b>React, Vite, motion</div><div><b>Creative AI</b>image and video workflows</div></div>
+</div>
+</section>
+
+<section id="capabilities">
+<div class="wrap">
+<p class="eyebrow rv">Capabilities</p>
+<h2 class="rv">Three disciplines, one build process.</h2>
+<div class="grid">
+<article class="card rv"><span class="num">01</span><h3>AI product engineering</h3><p>Assistants, agents and prompt tools with tight scope, readable behaviour and real error handling.</p></article>
+<article class="card rv"><span class="num">02</span><h3>Interface craft</h3><p>Fast, accessible frontends where typography, spacing and motion carry the product feel.</p></article>
+<article class="card rv"><span class="num">03</span><h3>Creative production</h3><p>Cinematic video editing and visual design, so what ships also looks like it was meant to.</p></article>
+</div>
+
+<div class="tabs" role="tablist" aria-label="How I work">
+<button class="tab" role="tab" aria-selected="true" data-t="0">Listen</button>
+<button class="tab" role="tab" aria-selected="false" data-t="1">Build</button>
+<button class="tab" role="tab" aria-selected="false" data-t="2">Remember</button>
+<button class="tab" role="tab" aria-selected="false" data-t="3">Ship</button>
+</div>
+<div class="card panel" id="panel" role="tabpanel" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="work">
+<div class="wrap">
+<p class="eyebrow rv">Selected work</p>
+<h2 class="rv">Projects and how people use them.</h2>
+<div class="car" id="car" tabindex="0" aria-label="Project carousel">
+<article class="card"><q>A voice assistant that remembers me and speaks my language.</q><span class="chip">Mimi AI</span><p>Personal voice assistant with persistent memory and natural Hinglish speech.</p></article>
+<article class="card"><q>A dark workspace where ideas become images and video.</q><span class="chip">NEXON LAB</span><p>An AI creative workspace with a long-term path toward a full SaaS product.</p></article>
+<article class="card"><q>I need a better prompt before I waste another hour.</q><span class="chip">PromptVerse</span><p>A prompt platform with a redesigned homepage built through an AI-assisted IDE workflow.</p></article>
+<article class="card"><q>Show people who I am in thirty seconds.</q><span class="chip">Portfolio</span><p>A personal site and GitHub presence for the Quantum Creator brand.</p></article>
+</div>
+<div class="ctl"><button class="icon" id="prev" aria-label="Previous project">←</button><button class="icon" id="next" aria-label="Next project">→</button></div>
+</div>
+</section>
+
+<section id="approach">
+<div class="wrap split">
+<div>
+<p class="eyebrow rv">Trust and privacy</p>
+<h2 class="rv">Restraint is a feature, not a footnote.</h2>
+<p class="lead rv" style="margin-top:20px">Anything an assistant does on someone’s behalf should be visible, reversible and approved. I build with these defaults.</p>
+</div>
+<div class="steps rv">
+<div><p style="margin:0"><b>Ask before acting</b><span>Messages, payments and bookings wait for a clear yes.</span></p></div>
+<div><p style="margin:0"><b>Keep secrets out of the model</b><span>Credentials stay in a vault, never in a prompt.</span></p></div>
+<div><p style="margin:0"><b>Store less, show more</b><span>Memory is scoped, plain-language and removable.</span></p></div>
+<div><p style="margin:0"><b>Write the limits down</b><span>What a tool can’t do is documented next to what it can.</span></p></div>
+</div>
+</div>
+</section>
+
+<section id="architecture">
+<div class="wrap">
+<p class="eyebrow rv">System design</p>
+<h2 class="rv">How a request travels.</h2>
+<div class="flow rv">
+<div class="node"><b>Input</b><small>Voice, text, files</small></div><div class="arrow pulse">→</div>
+<div class="node"><b>Router</b><small>Picks the next move</small></div><div class="arrow pulse">→</div>
+<div class="node"><b>Tools</b><small>Code, search, media</small></div><div class="arrow pulse">→</div>
+<div class="node"><b>Approval</b><small>You confirm</small></div><div class="arrow pulse">→</div>
+<div class="node"><b>Result</b><small>Saved with context</small></div>
+</div>
+</div>
+</section>
+
+<section id="memory">
+<div class="wrap split">
+<div>
+<p class="eyebrow rv">Memory</p>
+<h2 class="rv">A memory you can read and edit.</h2>
+<p class="lead rv" style="margin-top:20px">Illustrative demo. Remove any fact and the assistant stops using it.</p>
+<button class="btn ghost rv" id="reset" style="margin-top:24px">Reset demo</button>
+</div>
+<div class="mem rv" id="mem"></div>
+</div>
+</section>
+
+<section id="product">
+<div class="wrap">
+<p class="eyebrow rv">What I build</p>
+<h2 class="rv">Product capabilities.</h2>
+<div class="grid">
+<article class="card rv"><h3>Voice agents</h3><p>Speech in, speech out, with multilingual support including Hinglish.</p></article>
+<article class="card rv"><h3>Prompt systems</h3><p>Reusable prompt libraries and tooling for repeatable results.</p></article>
+<article class="card rv"><h3>Creative pipelines</h3><p>Image and video generation flows tied into one workspace.</p></article>
+<article class="card rv"><h3>Web applications</h3><p>React frontends with accessible, lightweight interaction.</p></article>
+<article class="card rv"><h3>Integrations</h3><p>Clear boundaries for each external service, never faked.</p></article>
+<article class="card rv"><h3>Brand and motion</h3><p>Visual identity, edits and graphics under one consistent look.</p></article>
+</div>
+</div>
+</section>
+
+<section id="notes">
+<div class="wrap">
+<p class="eyebrow rv">Field notes</p>
+<h2 class="rv">Short guides from the build desk.</h2>
+<div class="acc" id="notesAcc"></div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+<p class="eyebrow rv">FAQ</p>
+<h2 class="rv">The short answers.</h2>
+<div class="acc" id="faqAcc"></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap" style="text-align:center">
+<h2 class="rv" style="max-width:16ch;margin:0 auto">Have something worth building?</h2>
+<p class="lead rv" style="margin:20px auto 32px">Tell me what it should do and who it’s for. I’ll reply with a clear first step.</p>
+<a class="btn rv" href="mailto:wreja2030@gmail.com?subject=Project%20enquiry">Email Washim →</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="fgrid">
+<div><a class="logo" href="#top" style="display:inline">Washim<i> Reja</i></a><p style="color:var(--mute);max-width:34ch">Independent AI engineer, software developer and technology creator, based in India.</p></div>
+<div><h4>Explore</h4><a href="#capabilities">Capabilities</a><a href="#work">Work</a><a href="#approach">Approach</a><a href="#faq">FAQ</a></div>
+<div><h4>Contact</h4><a href="mailto:wreja2030@gmail.com">wreja2030@gmail.com</a><a href="#top">Back to top ↑</a></div>
+</div>
+<div class="copy"><span>© 2026 Washim Reja. All rights reserved.</span><span>Independent design, original brand.</span></div>
+</div>
+</footer>
+
+<script>
+(function(){
+var $=function(s,r){return (r||document).querySelector(s)};
+var tabs=[
+{t:"Listen",h:"Start from the real problem.",l:["Who uses it, and when?","What should it never do?","Where does it need to ask?"]},
+{t:"Build",h:"Ship a working first version.",l:["Prototype in days, not months","Readable code and small components","Real error states from day one"]},
+{t:"Remember",h:"Keep context without hoarding it.",l:["Scoped, plain-language memory","Easy to inspect and remove","Nothing stored by default"]},
+{t:"Ship",h:"Polish until it feels finished.",l:["Responsive on every screen","Accessible controls and focus","Fast load, light motion"]}];
+var panel=$("#panel");
+function show(i){var d=tabs[i];panel.innerHTML="<div><p class='eyebrow'>"+d.t+"</p><h3>"+d.h+"</h3></div><ul>"+d.l.map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul>"}
+show(0);
+document.querySelectorAll(".tab").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".tab").forEach(function(o){o.setAttribute("aria-selected",o===b)});show(+b.dataset.t)})});
+
+var car=$("#car");
+function step(d){car.scrollBy({left:d*(car.firstElementChild.offsetWidth+16),behavior:"smooth"})}
+$("#prev").onclick=function(){step(-1)};$("#next").onclick=function(){step(1)};
+
+var facts=[["Prefers replies in Hinglish.","Learned from voice chats","Voice"],["Is building a creative AI workspace.","Mentioned while planning","Projects"],["Likes a dark, minimal interface.","Noted from design feedback","Design"]];
+var mem=$("#mem");
+function drawMem(){mem.innerHTML="";facts.forEach(function(f){var d=document.createElement("div");d.className="fact";d.innerHTML="<div><b style='font-weight:500'>"+f[0]+"</b><small>"+f[1]+"</small><div style='margin-top:8px'><span class='chip'>"+f[2]+"</span><span class='chip'>Removable</span></div></div><button class='x'>Forget</button>";d.querySelector(".x").onclick=function(){d.classList.add("gone");setTimeout(function(){d.remove();if(!mem.children.length)mem.innerHTML="<p style='color:var(--mute)'>Nothing remembered. Exactly as intended.</p>"},300)};mem.appendChild(d)})}
+drawMem();$("#reset").onclick=drawMem;
+
+function acc(id,items){var root=$(id);items.forEach(function(it,i){var b=document.createElement("button");b.className="q";b.setAttribute("aria-expanded","false");b.id=id.slice(1)+"b"+i;b.innerHTML=it[0]+"<span aria-hidden='true'>+</span>";var a=document.createElement("div");a.className="a";a.setAttribute("role","region");a.setAttribute("aria-labelledby",b.id);a.innerHTML="<div><p>"+it[1]+"</p></div>";b.onclick=function(){var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",!o);a.classList.toggle("open",!o)};root.appendChild(b);root.appendChild(a)})}
+acc("#notesAcc",[["Why assistants should ask before they act","Anything that touches another person or spends money deserves a confirmation step. It costs a second and saves trust."],["Designing a memory people can read","Use short, plain facts with a visible reason and a one-tap remove. If a leak would feel like a diary, store less."],["Making voice feel natural in two languages","Mixed-language speech needs testing with real phrases, not translations. Handle code-switching in both recognition and reply."],["Shipping a first version fast","Pick one job, build the smallest working path, and write down what it can’t do yet."]]);
+acc("#faqAcc",[["What kind of work do you take on?","AI-powered web apps, voice and memory assistants, creative AI tooling and polished frontends."],["Do you work alone?","Yes. I’m an independent engineer, and I bring in specialists only when a project needs them."],["How do we start?","Send a short email with the goal, the audience and a rough timeline. I’ll reply with a first step."],["Do you build the backend too?","Only when a real feature needs one. Otherwise I keep things simple and clearly bounded."],["Where are you based?","India, working with clients in any time zone."]]);
+
+var t=$("#theme"),r=document.documentElement;
+try{var s=localStorage.getItem("wr-theme");if(s)r.setAttribute("data-theme",s)}catch(e){}
+t.onclick=function(){var dark=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);var n=dark?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("wr-theme",n)}catch(e){}};
+
+var m=$("#menu"),l=$("#links");
+function close(){l.classList.remove("open");m.setAttribute("aria-expanded","false")}
+m.onclick=function(){var o=l.classList.toggle("open");m.setAttribute("aria-expanded",o)};
+l.addEventListener("click",function(e){if(e.target.tagName==="A")close()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+
+var els=document.querySelectorAll(".rv");
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add("in")})}
+})();
+</script>
+</body>
+</html>
